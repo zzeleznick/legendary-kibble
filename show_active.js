@@ -23,6 +23,9 @@ const getActiveUsers = function(tab) {
 			var status = statuses.map ( (s) => cstring.match(s) !== null).findIndex((el) => el === true)
 			return {uid: uid, name: name, status: status}
 		}
+		$('.date-block').bind("DOMNodeInserted",function(){
+		    console.log("new message in current chat");
+		})
 		var users = statusElements.map ( (el) => parseUser(el) )
 		return users;
 	}

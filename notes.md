@@ -32,6 +32,17 @@ window.HC.AppDispatcher.register({"chat-is-scrolling": function() {console.log("
 r = HC.ApplicationStore.data.activeRooms[HC.ApplicationStore.data.active_chat]
 r = window.HC.api.getActiveChat()
 
+$(document).bind("DOMNodeInserted", function(e){
+    console.log("new dom node", e);
+    window.last = e
+    var badges = Array.prototype.slice.call(document.querySelectorAll('.hc-mention')) || []
+    console.log("Badges", badges.length)
+})
+// examine target
+$('.date-block').bind("DOMNodeInserted",function(){
+            console.log("new message in current chat");
+})
+
 key: '_checkOrigin',
         value: function _checkOrigin(event, reg) {
           var no_source_types = ['init', 'event_query'];

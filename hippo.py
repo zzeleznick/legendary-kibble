@@ -1,7 +1,7 @@
 import os
 import argparse
 
-SCRIPT = "test.js"
+SCRIPT = "show_unread.js"
 
 os.system("osascript -l JavaScript {}".format(SCRIPT))
 
