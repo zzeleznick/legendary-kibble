@@ -1,0 +1,17 @@
+# Python Ignore
+*.pyc
+__pycache__/
+.env/
+env/
+
+# Mac Ignore
+.DS_Store
+
+# General Ignore
+output/
+build/
+bin/
+ref/
+logs/
+*.log
+*.output/
